@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transform Your Body | XING FITNESS CLUB</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700;1,900&family=Barlow:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --red: red;
+        --red-glow: rgba(239, 35, 60, 0.4);
+        --red-dim: rgba(239, 35, 60, 0.15);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Barlow", sans-serif;
+        background: #000;
+        color: #fff;
+        overflow-x: hidden;
+      }
+
+      .font-condensed {
+        font-family: "Barlow Condensed", sans-serif;
+      }
+
+      @keyframes fade-in-up {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes animStar {
+        from {
+          transform: translateY(0px);
+        }
+        to {
+          transform: translateY(-2000px);
+        }
+      }
+
+      .animate-fade-up {
+        animation: fade-in-up 0.8s ease-out forwards;
+        opacity: 0;
+      }
+      .delay-1 { animation-delay: 0.1s; }
+      .delay-2 { animation-delay: 0.2s; }
+      .delay-3 { animation-delay: 0.3s; }
+
+      .stars-1 {
+        box-shadow:
+          234px 124px #fff,
+          654px 345px #fff,
+          876px 12px #fff,
+          1200px 800px #fff,
+          400px 1500px #fff,
+          1800px 200px #fff,
+          100px 1000px #fff,
+          900px 1900px #fff,
+          500px 600px #fff,
+          1400px 100px #fff,
+          300px 400px #fff,
+          1600px 1200px #fff;
+      }
+      .stars-2 {
+        box-shadow:
+          123px 456px rgba(255, 255, 255, 0.5),
+          789px 234px rgba(255, 255, 255, 0.5),
+          456px 890px rgba(255, 255, 255, 0.5),
+          1100px 300px rgba(255, 255, 255, 0.5),
+          200px 1200px rgba(255, 255, 255, 0.5),
+          1500px 500px rgba(255, 255, 255, 0.5);
+      }
+
+      .text-stroke {
+        -webkit-text-stroke: 1px rgba(255, 255, 255, 0.08);
+        color: transparent;
+      }
+
+      .selection-red::selection {
+        background: #ef233c;
+        color: white;
+      }
+
+      .slash-divider {
+        width: 60px;
+        height: 4px;
+        background: var(--red);
+        transform: skewX(-15deg);
+      }
+
+      .stat-card:hover {
+        border-color: var(--red);
+        box-shadow: 0 0 30px var(--red-dim);
+      }
+    </style>
+  </head>
+  <body class="selection-red">
+    <!-- Background System -->
+    <div class="fixed inset-0 z-0 pointer-events-none">
+      <div class="absolute inset-0 bg-gradient-to-b from-[#1a0303] via-[#0a0000] to-black"></div>
+      <div class="absolute top-0 left-0 w-[1px] h-[1px] bg-transparent stars-1 animate-[animStar_60s_linear_infinite] opacity-30"></div>
+      <div class="absolute top-0 left-0 w-[2px] h-[2px] bg-transparent stars-2 animate-[animStar_100s_linear_infinite] opacity-20"></div>
+      <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] bg-red-600/5 rounded-full blur-[150px]"></div>
+      <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:radial-gradient(circle_at_center,black_30%,transparent_75%)]"></div>
+    </div>
+
+    <!-- NAVBAR -->
+    <header class="fixed top-0 left-0 w-full z-50 px-4 pt-4">
+      <nav class="max-w-6xl mx-auto flex items-center justify-between bg-black/70 backdrop-blur-xl border border-white/10 px-6 py-3 shadow-2xl" style="border-radius: 6px">
+        <div class="flex items-center gap-3">
+          <a href="Gym.html" class="flex items-center gap-3">
+            <div class="relative w-8 h-8 flex items-center justify-center">
+              <div class="absolute inset-0 bg-[#ef233c] skew-x-[-8deg]"></div>
+              <span class="relative font-condensed font-900 text-white text-lg z-10">XING</span>
+            </div>
+            <span class="font-condensed font-800 text-xl tracking-widest uppercase">XING FITNESS CLUB</span>
+          </a>
+        </div>
+        <div>
+          <a href="booking.html" class="group relative inline-flex items-center justify-center overflow-hidden px-5 py-2 bg-[#ef233c] hover:bg-red-700 transition-colors" style="border-radius: 4px">
+            <span class="relative z-10 flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-white">
+              Claim Free Trial
+              <iconify-icon icon="lucide:arrow-right" class="group-hover:translate-x-0.5 transition-transform"></iconify-icon>
+            </span>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- HERO INTRODUCTION -->
+    <main class="relative z-10 max-w-6xl mx-auto px-6 pt-32 pb-24">
+      <section class="text-center max-w-3xl mx-auto mb-24 animate-fade-up delay-1">
+        <p class="text-xs text-red-500 uppercase tracking-widest font-condensed font-bold mb-2">Google Ads Exclusive Guide</p>
+        <h1 class="font-condensed font-900 uppercase text-5xl md:text-7xl leading-none text-white mb-6">
+          THE RAW TRUTH ABOUT <br/><span class="text-[#ef233c]">BODY TRANSFORMATION</span>
+        </h1>
+        <p class="text-zinc-400 text-lg uppercase tracking-wide">
+          Stop burning money on generic tracking apps and unscientific routines. Learn what it actually takes to strip fat or pack on hard muscle mass.
+        </p>
+      </section>
+
+      <!-- SECTION 1: MISCONCEPTIONS -->
+      <section class="mb-32 animate-fade-up delay-2">
+        <div class="mb-12">
+          <div class="slash-divider mb-4"></div>
+          <p class="text-xs text-zinc-500 uppercase tracking-widest font-condensed mb-1">Section 01 // Myth Busting</p>
+          <h2 class="font-condensed font-900 uppercase text-3xl md:text-5xl text-white">
+            LIES YOU'VE BEEN TOLD ABOUT <span class="text-[#ef233c]">FAT & MUSCLE</span>
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Myth 1 -->
+          <div class="border border-white/10 bg-zinc-950/40 p-8 stat-card transition-all" style="border-radius: 8px;">
+            <div class="flex items-center gap-3 text-red-500 mb-4">
+              <iconify-icon icon="lucide:x-circle" class="w-6 h-6"></iconify-icon>
+              <h3 class="font-condensed font-900 uppercase text-xl md:text-2xl tracking-wide text-white">The Weight Loss Fallacy</h3>
+            </div>
+            <p class="text-zinc-400 leading-relaxed text-sm">
+              <strong class="text-white">The Myth:</strong> "To lose weight, you just need to grind hours of cardio and starve yourself." <br/><br/>
+              <strong class="text-red-400">The Reality:</strong> Severe calorie deprivation crushes your metabolic rate and forces your body to burn off muscle instead of fat. You end up looking "skinny fat" instead of lean and athletic.
+            </p>
+          </div>
+
+          <!-- Myth 2 -->
+          <div class="border border-white/10 bg-zinc-950/40 p-8 stat-card transition-all" style="border-radius: 8px;">
+            <div class="flex items-center gap-3 text-red-500 mb-4">
+              <iconify-icon icon="lucide:x-circle" class="w-6 h-6"></iconify-icon>
+              <h3 class="font-condensed font-900 uppercase text-xl md:text-2xl tracking-wide text-white">The Muscle Gain Fallacy</h3>
+            </div>
+            <p class="text-zinc-400 leading-relaxed text-sm">
+              <strong class="text-white">The Myth:</strong> "To build massive muscle, you must train until failure every single day and eat everything in sight." <br/><br/>
+              <strong class="text-red-400">The Reality:</strong> Overtraining without systematic recovery protocols spike cortisol levels, halting growth entirely. Dirty bulking simply piles on unwanted visceral fat, hiding your hard-earned gains.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 2: HOW TO DO IT RIGHT -->
+      <section class="mb-32">
+        <div class="mb-12">
+          <div class="slash-divider mb-4"></div>
+          <p class="text-xs text-zinc-500 uppercase tracking-widest font-condensed mb-1">Section 02 // The Blueprint</p>
+          <h2 class="font-condensed font-900 uppercase text-3xl md:text-5xl text-white">
+            HOW TO DO IT <span class="text-[#ef233c]">THE RIGHT WAY</span>
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Right Fat Loss -->
+          <div class="p-8 border border-zinc-800 bg-black/50" style="border-radius: 8px;">
+            <div class="inline-flex p-3 bg-white/5 text-green-400 mb-6" style="border-radius: 6px;">
+              <iconify-icon icon="lucide:flame" class="w-6 h-6"></iconify-icon>
+            </div>
+            <h3 class="font-condensed font-900 uppercase text-2xl text-white mb-4">Scientific Sustainable Shredding</h3>
+            <ul class="space-y-4 text-zinc-400 text-sm">
+              <li class="flex items-start gap-3">
+                <iconify-icon icon="lucide:check" class="text-green-400 mt-0.5 shrink-0"></iconify-icon>
+                <span><strong>Controlled Deficit:</strong> A slight 300-500 calorie drop keeps your hormones healthy while stripping body fat cleanly.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <iconify-icon icon="lucide:check" class="text-green-400 mt-0.5 shrink-0"></iconify-icon>
+                <span><strong>Heavy Resistance Training:</strong> Tells your nervous system to hold onto muscle tissue, making fat your primary fuel source.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <iconify-icon icon="lucide:check" class="text-green-400 mt-0.5 shrink-0"></iconify-icon>
+                <span><strong>High Protein Metrics:</strong> Maximizes thermic effects and prevents lean body tissue wastage.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Right Muscle Gain -->
+          <div class="p-8 border border-zinc-800 bg-black/50" style="border-radius: 8px;">
+            <div class="inline-flex p-3 bg-white/5 text-purple-400 mb-6" style="border-radius: 6px;">
+              <iconify-icon icon="lucide:activity" class="w-6 h-6"></iconify-icon>
+            </div>
+            <h3 class="font-condensed font-900 uppercase text-2xl text-white mb-4">Clean Progressive Hypertrophy</h3>
+            <ul class="space-y-4 text-zinc-400 text-sm">
+              <li class="flex items-start gap-3">
+                <iconify-icon icon="lucide:check" class="text-purple-400 mt-0.5 shrink-0"></iconify-icon>
+                <span><strong>Progressive Overload:</strong> Methodically tracking load volume over time instead of just lifting random heavy weights.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <iconify-icon icon="lucide:check" class="text-purple-400 mt-0.5 shrink-0"></iconify-icon>
+                <span><strong>Lean Surplus Logistics:</strong> Consuming an explicit 200-300 clean calorie surplus to build dense muscle blocks without water bloat.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <iconify-icon icon="lucide:check" class="text-purple-400 mt-0.5 shrink-0"></iconify-icon>
+                <span><strong>Deload Cycles:</strong> Pre-programmed recovery weeks that let CNS inflammation settle so muscles hyper-compensate.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 3: THE XING ADVANTAGE -->
+      <section class="mb-32 bg-zinc-950/40 border border-white/5 p-8 md:p-12" style="border-radius: 8px;">
+        <div class="mb-12 text-center md:text-left">
+          <div class="slash-divider mb-4 mx-auto md:mx-0"></div>
+          <p class="text-xs text-zinc-500 uppercase tracking-widest font-condensed mb-1">Section 03 // Why Us</p>
+          <h2 class="font-condensed font-900 uppercase text-3xl md:text-5xl text-white">
+            HOW XING GUARANTEES <span class="text-[#ef233c]">YOUR TRANSFORMATION</span>
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <div>
+            <div class="font-condensed font-900 text-4xl text-[#ef233c] mb-2">CUSTOM PROTOCOLS</div>
+            <p class="text-zinc-400 text-sm leading-relaxed">No generic tracking apps. You receive an individual calorie, macro, and training schedule adjusted weekly by our expert coaches.</p>
+          </div>
+          <div class="border-y md:border-y-0 md:border-x border-white/10 py-6 md:py-0 md:px-6">
+            <div class="font-condensed font-900 text-4xl text-[#ef233c] mb-2">ELITE COACHING</div>
+            <p class="text-zinc-400 text-sm leading-relaxed">Work directly with certified sports nutritionists and competitive strength champions who hold you fully accountable.</p>
+          </div>
+          <div>
+            <div class="font-condensed font-900 text-4xl text-[#ef233c] mb-2">97% SUCCESS RATE</div>
+            <p class="text-zinc-400 text-sm leading-relaxed">Our execution methodology metrics speak for themselves. If you follow the plan accurately, failure isn't even a mathematical option.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- HIGH-CONVERTING CLOSING PITCH & ACTION BUTTONS -->
+      <section class="text-center max-w-2xl mx-auto border-t border-white/10 pt-16">
+        <h2 class="font-condensed font-900 uppercase text-4xl md:text-6xl text-white mb-4">STOP WASTING TIME</h2>
+        <p class="text-zinc-400 text-sm uppercase tracking-widest mb-8">
+          The choices are simple: Remain stuck in the trial-and-error cycle, or use our elite system to unlock real results.
+        </p>
+
+        <!-- Dynamic Action Row -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <!-- Booking Link -->
+          <a href="booking.html" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-[#ef233c] hover:bg-red-700 text-white font-condensed font-900 text-xl uppercase tracking-widest transition-all" style="border-radius: 4px;">
+            Book Free Trial Session
+          </a>
+          <!-- Home Link -->
+          <a href="Gym.html" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-white/5 hover:bg-white/10 text-white border border-white/10 font-condensed font-700 text-xl uppercase tracking-widest transition-all" style="border-radius: 4px;">
+            Return to Home
+          </a>
+        </div>
+        <p class="text-zinc-600 text-xs mt-4 uppercase tracking-wider">
+          Limited slots available for this month's intake program
+        </p>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-black border-t border-zinc-900 pt-10 pb-10 relative overflow-hidden">
+      <div class="flex justify-center items-center opacity-[0.04] pointer-events-none select-none">
+        <h1 class="font-condensed font-900 uppercase leading-none tracking-tighter text-stroke" style="font-size: 13vw">
+          xing fitness club
+        </h1>
+      </div>
+      <div class="max-w-7xl mx-auto px-6 text-center text-zinc-600 text-[10px] uppercase tracking-widest">
+        <p>© 2024 xing fitness club. ALL RIGHTS RESERVED.</p>
+      </div>
+    </footer>
+  </body>
+</html>
